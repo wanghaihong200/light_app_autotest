@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.idea/
+artifacts/
+allure-results/
+node/node_modules/
+profiles/apps.yaml
+.pytest_cache/
+*.egg-info/

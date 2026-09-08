@@ -1,0 +1,11 @@
+{
+  "name": "laf-sidecar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "laf 小程序驱动 sidecar：官方 miniprogram-automator 的 JSON-RPC 桥（ADR-0002）",
+  "main": "sidecar.js",
+  "dependencies": {
+    "miniprogram-automator": "^0.12.1",
+    "ws": "^8.17.0"
+  }
+}

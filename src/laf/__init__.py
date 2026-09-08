@@ -1,0 +1,3 @@
+"""laf - Light App Autotest Framework."""
+
+__version__ = "0.1.0"

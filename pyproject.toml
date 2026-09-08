@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "laf"
+version = "0.1.0"
+description = "Light App Autotest Framework - 产品线 UI 自动化测试框架（混合App + 微信小程序，预留鸿蒙）"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=8.0",
+    "PyYAML>=6.0",
+    "appium-python-client>=4.0",
+    "websocket-client>=1.7",
+    "allure-pytest>=2.13",
+    "pytest-xdist>=3.5",
+]
+
+[project.entry-points.pytest11]
+laf = "laf.plugin.pytestplugin"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "testcases"]
+addopts = "--strict-markers"
+markers = [
+    "app: 混合App用例（需真机+Appium）",
+    "mp: 小程序用例（需微信开发者工具）",
+    "real_device: 需要真实设备，默认 CI 跳过",
+]
